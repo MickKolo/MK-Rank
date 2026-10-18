@@ -118,3 +118,4 @@ p,ul,ol{margin:0 0 1em}
 .logo-foot{margin-bottom:.6rem}
 .site-footer .small{color:#9fb2bf;border-top:1px solid #1f3a4e;padding-top:1rem;margin-top:1rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.steps-plain{padding-left:1.2em}.steps-plain li{margin-bottom:.7em}

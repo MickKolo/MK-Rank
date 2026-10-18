@@ -2,27 +2,38 @@
 
 Static site for MK Rank, local SEO for trades businesses in Dorset. Plain HTML and one CSS file, no build step. Hosted on GitHub Pages.
 
-## Placeholders to replace before launch
+## Filled in
 
-Search the repo for these and replace every instance:
+- Prices: SEO fix-up £150, local SEO setup £200, monthly retainer £120 per month (schema prices are plain numbers: 150, 200, 120)
+- Phone: 07469 886043, linked as `tel:+447469886043`, schema `+447469886043`
+- Site URL: `https://mickkolo.github.io/MK-Rank/` (canonicals, Open Graph, schema, sitemap.xml, robots.txt)
 
-| Placeholder | What to put in |
-|---|---|
-| `[DOMAIN]` | Your domain without `https://` (e.g. `mkrank.co.uk`). Used in canonicals, Open Graph, schema, sitemap.xml and robots.txt |
-| `[PHONE]` | Phone number (use `+44...` format inside `tel:` links) |
-| `[EMAIL]` | Contact email |
-| `[CALENDLY_URL]` | Full Calendly booking link |
-| `[FORMSPREE_ID]` | Formspree form ID (contact/index.html) |
-| `[PRICE_FIXUP]`, `[PRICE_SETUP]`, `[PRICE_MONTHLY]` | Prices. On the page write e.g. `£295`; inside the JSON-LD `"price"` fields use the number only, e.g. `295` |
-| `[NUMBER]` | Number of area/service pages included in the local SEO setup |
-| `[TURNAROUND]` | Fix-up turnaround in working days |
-| `[LINKEDIN_URL]` | LinkedIn profile (about page and schema) |
-| `[DATE]` | Privacy notice date |
-| `assets/mick-placeholder.svg` | Replace with a real photo (keep the alt text) |
-| `[TESTIMONIALS]` | HTML comment on the home page: add real reviews only |
+## Placeholders still to do
+
+Each one sits inside an HTML comment, so visitors never see raw bracket text. Search the repo for the placeholder, fill it in and remove the comment markers.
+
+| Placeholder | Where | What to do |
+|---|---|---|
+| `[EMAIL]` | Footer of every page, contact page | No email shown yet. Add the `mailto:` link from the comment, and add `"email"` to the ProfessionalService schema on the home page. Also mention email on the privacy page |
+| `[CALENDLY_URL]` | contact/index.html | Uncomment the "Book a call online" block. All "Contact options" buttons already lead to the contact page |
+| `[FORMSPREE_ID]` | contact/index.html | Replace the ID and uncomment the form |
+| `[LINKEDIN_URL]` | about/index.html | Uncomment the link and add `"sameAs"` to the Person schema |
+| `[PHOTO]` | about/index.html | Add a real photo (for example `assets/mick.jpg`) and uncomment the `<img>` |
+| `[TESTIMONIALS]` | index.html | Add real reviews only |
+| `[NUMBER]` | services/local-seo-setup/ | Number of pages included in the setup |
+| `[TURNAROUND]` | services/seo-fix-up/ | Fix-up turnaround. Update the FAQ answer in both the visible text and the FAQPage JSON-LD |
 
 ## GitHub Pages
 
-Settings > Pages > deploy from branch `main`, folder `/`. Add a custom domain there (it creates a `CNAME` file). The 404 page and canonical URLs assume the site is served from the domain root, so use a custom domain rather than `mickkolo.github.io/mk-rank/`.
+Settings > Pages > Deploy from a branch > `main`, `/ (root)`. The site is served at `https://mickkolo.github.io/MK-Rank/`.
 
-After launch: submit `https://[DOMAIN]/sitemap.xml` in Google Search Console, and test pages with Google's Rich Results Test.
+Page and asset links are relative, so they work on both the subpath and a custom domain. Only `404.html` uses absolute `/MK-Rank/...` links, because GitHub serves it at any missing path.
+
+Note: search engines only read `robots.txt` at the root of a host, so `/MK-Rank/robots.txt` is ignored while the site is on github.io. Submit the sitemap in Google Search Console instead, using a URL-prefix property for `https://mickkolo.github.io/MK-Rank/`.
+
+## Switching to mkrank.co.uk later
+
+1. In Settings > Pages, set the custom domain to `mkrank.co.uk` (GitHub adds a `CNAME` file) and follow GitHub's DNS instructions. Tick "Enforce HTTPS".
+2. Replace every `https://mickkolo.github.io/MK-Rank` with `https://mkrank.co.uk` across all files. This covers canonicals, Open Graph, JSON-LD, sitemap.xml and robots.txt.
+3. In `404.html`, replace `/MK-Rank/` with `/`.
+4. Add a Domain property for mkrank.co.uk in Search Console and resubmit `https://mkrank.co.uk/sitemap.xml`.
