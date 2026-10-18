@@ -233,3 +233,5 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 @media (max-width:420px){.facts{grid-template-columns:1fr;gap:.1rem}.facts dd{margin-bottom:.6rem}}
 .points-one{grid-template-columns:1fr!important;margin-top:1rem}
 .card .ticks:last-child,.card p:last-child{margin-bottom:0}
+.ticks-sm{font-size:.95rem}
+.ticks-sm li{margin-bottom:.4em}
