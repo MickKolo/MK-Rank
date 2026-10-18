@@ -95,6 +95,11 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .btn-ghost-light:hover{background:rgba(255,255,255,.1);border-color:#fff}
 .btn-outline{background:#fff;color:var(--navy);border-color:var(--navy);box-shadow:none}
 .btn-outline:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+/* WhatsApp button: navy text on WhatsApp green (7.5:1, hover 6:1) */
+.btn-wa{background:#25d366;border-color:#25d366;color:var(--navy)}
+.btn-wa:hover{background:#1ebe5a;border-color:#1ebe5a;color:var(--navy)}
+.btn-wa::after{content:none}
+.wa-icon{flex:none;width:1.1em;height:1.1em;display:block}
 .cta-row{display:flex;flex-wrap:wrap;gap:.75rem}
 
 /* card link button: the whole card is clickable through .more */
@@ -286,6 +291,7 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .pi::before{content:"";width:1.1rem;height:1.1rem;background:var(--navy);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
 .pi-chart{--m:var(--i-chart)}.pi-tools{--m:var(--i-tools)}.pi-pin{--m:var(--i-pin)}.pi-tag{--m:var(--i-tag)}.pi-award{--m:var(--i-award)}
 .profile-cta{width:100%;justify-content:center}
+.profile-cta+.profile-cta{margin-top:.6rem}
 @media (min-width:860px){.profile{position:sticky;top:5.5rem}}
 @media (prefers-reduced-motion:reduce){.profile:hover{transform:none}}
 .profile-stats li{align-items:center;padding:.7rem .8rem}
