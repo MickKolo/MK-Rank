@@ -2,41 +2,35 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page Not Found | MK Rank</title>
 <meta name="description" content="Sorry, that page doesn't exist. Find local SEO services for Dorset trades businesses on the MK Rank home page.">
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/site.js" defer></script>
 <style>
 /* Links are root-absolute because GitHub serves this page at any missing path. */
-/* Inline styles: GitHub Pages serves this file at any missing path, so relative asset links would break */
-:root{--arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h15M13 6l6 6-6 6'/%3E%3C/svg%3E");--navy:#0f2a3d;--accent:#ffb703;--ink:#1d2a33;--muted:#4f5f6b}
-*{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:#fff;color:var(--ink);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-header{background:var(--navy);padding:.9rem 16px}
-.logo{display:inline-flex;align-items:center;gap:.4rem;color:#fff;font-weight:800;font-size:1.25rem;text-decoration:none}
-.mark{display:inline-grid;place-items:center;width:2.1rem;height:2.1rem;border-radius:7px;background:var(--accent);color:var(--navy);font-size:.95rem}
-main{flex:1;max-width:720px;margin:0 auto;padding:3.5rem 16px}
-h1{color:var(--navy);font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.2;margin:0 0 .6em}
-a{color:#0b5cad}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.btn{display:inline-flex;align-items:center;gap:.4em;background:var(--accent);color:var(--navy);font-weight:700;text-decoration:none;padding:.8em 1.3em;border-radius:8px}
-ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;margin:1.25rem 0 1.75rem}
-ul a{display:inline-flex;align-items:center;gap:.4em;padding:.55em 1em;border:1.5px solid var(--navy);border-radius:999px;color:var(--navy);font-weight:600;text-decoration:none;transition:transform .2s,background-color .2s,color .2s}
-ul a::after,.btn::after{content:"";flex:none;width:1em;height:1em;background:currentColor;-webkit-mask:var(--arrow) center/contain no-repeat;mask:var(--arrow) center/contain no-repeat;transition:transform .2s}
-ul a:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
-ul a:hover::after,.btn:hover::after{transform:translateX(3px)}
-.btn{border-radius:999px;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px -8px rgba(15,42,61,.45)}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}ul a:hover,.btn:hover{transform:none}}
+body{min-height:100vh;display:flex;flex-direction:column}
+.nf{flex:1;width:100%;max-width:760px;margin:0 auto;padding:3.5rem 16px}
+.nf .area-list{margin:1.25rem 0 1.75rem}
 </style>
 </head>
 <body>
-<header><a class="logo" href="/" aria-label="MK Rank home"><span class="mark" aria-hidden="true">MK</span> Rank</a></header>
-<main id="main">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap bar">
+<a class="logo" href="/" aria-label="MK Rank home"><span class="logo-mark" aria-hidden="true">MK</span> Rank</a>
+<nav class="main-nav" id="main-nav" aria-label="Main"><ul class="nav"><li><a href="/services/">Services</a></li><li><a href="/areas/">Areas</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul></nav>
+<a class="btn header-call" href="tel:+447469886043" aria-label="Call Mick on 07469 886043"><span class="hc-long" aria-hidden="true">Call 07469 886043</span><span class="hc-short" aria-hidden="true">Call Mick</span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-text">Menu</span></button>
+</div>
+</header>
+<main id="main" class="nf">
 <h1>Sorry, this page can't be found</h1>
 <p>The page may have moved, or the link might be wrong. Here are the pages most people are looking for:</p>
-<ul>
+<ul class="area-list">
 <li><a href="/services/">SEO services and prices</a></li>
 <li><a href="/services/local-seo-setup/">Local SEO setup for tradespeople</a></li>
 <li><a href="/areas/">Areas covered across Dorset</a></li>

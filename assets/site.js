@@ -23,3 +23,22 @@
     io.observe(el);
   }
 })();
+
+/* Mobile menu toggle. Without JS the .js class is never set, so the links stay visible. */
+(function () {
+  var btn = document.querySelector(".nav-toggle");
+  var nav = document.getElementById("main-nav");
+  if (!btn || !nav) return;
+  function set(open) {
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    nav.classList.toggle("is-open", open);
+  }
+  btn.addEventListener("click", function () { set(btn.getAttribute("aria-expanded") !== "true"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") { set(false); btn.focus(); }
+  });
+  document.addEventListener("click", function (e) {
+    if (btn.getAttribute("aria-expanded") === "true" && !nav.contains(e.target) && !btn.contains(e.target)) set(false);
+  });
+  window.addEventListener("resize", function () { if (window.innerWidth >= 760) set(false); });
+})();
