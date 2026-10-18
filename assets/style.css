@@ -225,3 +225,11 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 @media (min-width:860px){.card-wide{grid-template-columns:1fr auto auto}.card-wide .more{margin-top:0}.card-wide>div p{margin-bottom:0}}
 .card-wide .more{align-self:center;justify-self:start}
 .section-lead+.grid{margin-top:1.75rem}
+/* location pages */
+@media (min-width:760px){.grid.two{grid-template-columns:1fr 1fr}}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:.55rem 1rem;margin:0}
+.facts dt{font-weight:700;color:var(--navy)}
+.facts dd{margin:0}
+@media (max-width:420px){.facts{grid-template-columns:1fr;gap:.1rem}.facts dd{margin-bottom:.6rem}}
+.points-one{grid-template-columns:1fr!important;margin-top:1rem}
+.card .ticks:last-child,.card p:last-child{margin-bottom:0}

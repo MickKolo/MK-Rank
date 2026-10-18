@@ -4,7 +4,8 @@ Static site for MK Rank, local SEO for trades businesses in Dorset. Plain HTML a
 
 ## Filled in
 
-- Prices: SEO fix-up £150, local SEO setup £200, monthly retainer £120 per month (schema prices are plain numbers: 150, 200, 120)
+- Prices: SEO fix-up £200, local SEO setup £200, monthly retainer £150 per month, SEO-ready starter website £500, optional website care plan £30 per month, WordPress website on quote (schema prices are plain numbers: 200, 200, 150, 500, 30)
+- Schema `priceRange` on the home page: `£30–£500`
 - Phone: 07469 886043, linked as `tel:+447469886043`, schema `+447469886043`
 - Site URL: `https://mickkolo.github.io/MK-Rank/` (canonicals, Open Graph, schema, sitemap.xml, robots.txt)
 
