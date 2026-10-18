@@ -8,7 +8,7 @@ Static site for MK Rank, local SEO for trades businesses in Dorset. Plain HTML a
 - Schema `priceRange` on the home page: `£60–£500`
 - Phone: 07469 886043, linked as `tel:+447469886043`, schema `+447469886043`
 - Experience wording (approved): "5 years in digital marketing, now specialising in SEO". Adapt naturally, e.g. "Five years in digital marketing, now specialising in local SEO for trades". Never mention Mick's current role or employer, and never claim 5 years of SEO specifically
-- Site URL: `https://mickkolo.github.io/MK-Rank/` (canonicals, Open Graph, schema, sitemap.xml, robots.txt)
+- Site URL: `https://mk-rank.co.uk/` (canonicals, Open Graph, schema, sitemap.xml, robots.txt). The `CNAME` file at the repo root holds `mk-rank.co.uk`
 
 ## Placeholders still to do
 
@@ -25,17 +25,14 @@ Each one sits inside an HTML comment, so visitors never see raw bracket text. Se
 | `[NUMBER]` | services/local-seo-setup/ | Number of pages included in the setup |
 | `[TURNAROUND]` | services/seo-fix-up/ | Fix-up turnaround. Update the FAQ answer in both the visible text and the FAQPage JSON-LD |
 
-## GitHub Pages
+## GitHub Pages and the domain
 
-Settings > Pages > Deploy from a branch > `main`, `/ (root)`. The site is served at `https://mickkolo.github.io/MK-Rank/`.
+Settings > Pages > Deploy from a branch > `main`, `/ (root)`. The site is served at **https://mk-rank.co.uk/** through the `CNAME` file. DNS is on Cloudflare: four GitHub Pages A records for `@` and a `www` CNAME to `mickkolo.github.io`, both set to DNS only (grey cloud). Tick "Enforce HTTPS" in Pages settings once GitHub has issued the certificate.
 
-Page and asset links are relative, so they work on both the subpath and a custom domain. Only `404.html` uses absolute `/MK-Rank/...` links, because GitHub serves it at any missing path.
+Page and asset links are relative. Only `404.html` uses root-absolute links (`/...`), because GitHub serves it at any missing path.
 
-Note: search engines only read `robots.txt` at the root of a host, so `/MK-Rank/robots.txt` is ignored while the site is on github.io. Submit the sitemap in Google Search Console instead, using a URL-prefix property for `https://mickkolo.github.io/MK-Rank/`.
+The switch from `https://mickkolo.github.io/MK-Rank/` to `https://mk-rank.co.uk/` is done: canonicals, Open Graph and Twitter tags, JSON-LD, sitemap.xml, robots.txt and the 404 links all use the new domain. The old github.io address redirects to the custom domain.
 
-## Switching to mkrank.co.uk later
+Next: add a Domain property for mk-rank.co.uk in Google Search Console and submit `https://mk-rank.co.uk/sitemap.xml`. robots.txt is now at the host root, so crawlers will read it.
 
-1. In Settings > Pages, set the custom domain to `mkrank.co.uk` (GitHub adds a `CNAME` file) and follow GitHub's DNS instructions. Tick "Enforce HTTPS".
-2. Replace every `https://mickkolo.github.io/MK-Rank` with `https://mkrank.co.uk` across all files. This covers canonicals, Open Graph, JSON-LD, sitemap.xml and robots.txt.
-3. In `404.html`, replace `/MK-Rank/` with `/`.
-4. Add a Domain property for mkrank.co.uk in Search Console and resubmit `https://mkrank.co.uk/sitemap.xml`.
+If you also buy `mkrank.co.uk`, redirect it to `https://mk-rank.co.uk/` at the registrar (for example a Cloudflare redirect rule). Don't add it as a second Pages domain.

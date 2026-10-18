@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mickkolo.github.io/MK-Rank/sitemap.xml
+Sitemap: https://mk-rank.co.uk/sitemap.xml
