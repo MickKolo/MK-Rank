@@ -305,3 +305,13 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .al-text span{font-size:.9rem;color:var(--muted)}
 .area-also{color:var(--ink);font-size:.97rem}
 @media (prefers-reduced-motion:reduce){.area-link:hover,.area-link:focus-visible{transform:none}}
+
+/* monthly retainer: what-to-expect timeline */
+.timeline{list-style:none;padding:0;margin:1.75rem 0 0;display:grid;gap:1.25rem;position:relative}
+@media (min-width:760px){.timeline{grid-template-columns:repeat(3,1fr)}}
+.timeline li{position:relative;background:#fff;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:var(--radius);padding:1.25rem 1.35rem;box-shadow:var(--shadow-sm)}
+.timeline li:last-child{border-top-color:var(--navy)}
+.tl-when{display:inline-flex;align-items:center;margin:0 0 .6rem;padding:.2rem .7rem;border-radius:999px;background:var(--accent-soft);color:var(--navy);font-weight:700;font-size:.85rem;letter-spacing:.02em}
+.timeline li:last-child .tl-when{background:var(--navy);color:#fff}
+.timeline h3{margin-bottom:.4rem}
+.timeline li p:last-child{margin-bottom:0}
