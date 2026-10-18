@@ -10,7 +10,7 @@
 <style>
 /* Links are absolute to /MK-Rank/ because this page is served at any missing path. Change /MK-Rank/ to / when moving to a custom domain. */
 /* Inline styles: GitHub Pages serves this file at any missing path, so relative asset links would break */
-:root{--navy:#0f2a3d;--accent:#ffb703;--ink:#1d2a33;--muted:#4f5f6b}
+:root{--arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12h15M13 6l6 6-6 6'/%3E%3C/svg%3E");--navy:#0f2a3d;--accent:#ffb703;--ink:#1d2a33;--muted:#4f5f6b}
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:#fff;color:var(--ink);font:1.0625rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
 header{background:var(--navy);padding:.9rem 16px}
@@ -23,7 +23,7 @@ a{color:#0b5cad}
 .btn{display:inline-flex;align-items:center;gap:.4em;background:var(--accent);color:var(--navy);font-weight:700;text-decoration:none;padding:.8em 1.3em;border-radius:8px}
 ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.6rem;margin:1.25rem 0 1.75rem}
 ul a{display:inline-flex;align-items:center;gap:.4em;padding:.55em 1em;border:1.5px solid var(--navy);border-radius:999px;color:var(--navy);font-weight:600;text-decoration:none;transition:transform .2s,background-color .2s,color .2s}
-ul a::after,.btn::after{content:"\2192";display:inline-block;transition:transform .2s}
+ul a::after,.btn::after{content:"";flex:none;width:1em;height:1em;background:currentColor;-webkit-mask:var(--arrow) center/contain no-repeat;mask:var(--arrow) center/contain no-repeat;transition:transform .2s}
 ul a:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
 ul a:hover::after,.btn:hover::after{transform:translateX(3px)}
 .btn{border-radius:999px;transition:transform .2s,box-shadow .2s}
