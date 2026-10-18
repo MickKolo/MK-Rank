@@ -4,8 +4,8 @@ Static site for MK Rank, local SEO for trades businesses in Dorset. Plain HTML a
 
 ## Filled in
 
-- Prices: SEO fix-up £200, local SEO setup £200, monthly retainer £150 per month, SEO-ready starter website £500, optional website care plan £30 per month, WordPress website on quote (schema prices are plain numbers: 200, 200, 150, 500, 30)
-- Schema `priceRange` on the home page: `£30–£500`
+- Prices: SEO fix-up £200, local SEO setup £200, monthly retainer £150 per month, SEO-ready starter website £500, optional website care plan £60 per month, WordPress website on quote (schema prices are plain numbers: 200, 200, 150, 500, 60)
+- Schema `priceRange` on the home page: `£60–£500`
 - Phone: 07469 886043, linked as `tel:+447469886043`, schema `+447469886043`
 - Experience wording (approved): "5 years in digital marketing, now working day to day as an SEO account manager at a UK agency, managing SEO for multiple client accounts." Short form: "5 years in digital marketing, now an agency SEO account manager". Never name the agency or claim 5 years of SEO specifically
 - Site URL: `https://mickkolo.github.io/MK-Rank/` (canonicals, Open Graph, schema, sitemap.xml, robots.txt)
