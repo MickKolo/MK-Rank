@@ -39,7 +39,14 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .nav a:hover{background:rgba(255,255,255,.1);color:#fff;transform:translateY(-1px)}
 .nav a[aria-current="page"]{background:rgba(255,183,3,.16);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,183,3,.45)}
 /* call button: icon-only on phones, "Call Mick" at mid widths, full number on wide screens */
-.btn.header-call{justify-self:end;padding:.6em 1.1em;font-size:.97rem;white-space:nowrap}
+/* header actions: WhatsApp icon + call button, kept together in the right-hand column */
+.header-actions{justify-self:end;display:flex;align-items:center;gap:.6rem}
+.btn.header-call{padding:.6em 1.1em;font-size:.97rem;white-space:nowrap}
+/* round WhatsApp icon, same height as the call pill (2px border + .6em padding + 1.2 line-height at .97rem) */
+.header-wa{--hw:calc(2.328rem + 4px);flex:none;display:inline-grid;place-items:center;width:var(--hw);height:var(--hw);border-radius:50%;background:#25d366;color:var(--navy);box-shadow:0 2px 0 rgba(0,0,0,.18);transition:transform var(--t) var(--ease),background-color var(--t),box-shadow var(--t) var(--ease)}
+.header-wa:hover{background:#1ebe5a;transform:translateY(-2px);box-shadow:0 8px 18px -8px rgba(0,0,0,.6)}
+.header-wa:active{transform:translateY(0)}
+.header-wa .wa-icon{width:1.2rem;height:1.2rem}
 .header-call::after{content:none}
 .header-call .hc-long{display:none}
 .header-call .hc-short{display:none}
@@ -55,9 +62,11 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 @media (max-width:759px){
   .bar{grid-template-columns:1fr auto auto}
   .main-nav{grid-column:1/-1;grid-row:2;margin:.5rem -.4rem 0}
-  .btn.header-call{grid-column:2;grid-row:1;width:2.75rem;height:2.75rem;aspect-ratio:1/1;padding:0;justify-content:center;gap:0}
-  .header-call::before{width:1.15rem;height:1.15rem}
-  .js .nav-toggle{display:inline-flex;grid-column:3;grid-row:1}
+  .header-actions{grid-column:2;grid-row:1}
+  .header-wa{--hw:2.75rem}
+  .btn.header-call{width:2.75rem;height:2.75rem;aspect-ratio:1/1;padding:0;justify-content:center;gap:0}
+  .btn.header-call[href]::before{width:1.3rem;height:1.3rem}
+  .js .nav-toggle{display:inline-flex;grid-column:3;grid-row:1;min-height:2.75rem}
   .js .main-nav{display:none}
   .js .main-nav.is-open{display:block;border-top:1px solid rgba(255,255,255,.12);padding-top:.5rem;margin-top:.6rem}
   .js .main-nav.is-open .nav{flex-direction:column;gap:.15rem}
@@ -246,7 +255,7 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
-  .btn:hover,.nav a:hover,.card:has(.more):hover,.card:has(.more:focus-visible),.area-list a:hover,.price-chips a:hover,.crumbs a:hover,.site-footer li a:hover{transform:none}
+  .btn:hover,.header-wa:hover,.nav a:hover,.card:has(.more):hover,.card:has(.more:focus-visible),.area-list a:hover,.price-chips a:hover,.crumbs a:hover,.site-footer li a:hover{transform:none}
   .reveal-pending{opacity:1;transform:none}
 }
 @media print{.reveal-pending{opacity:1!important;transform:none!important}.site-header{position:static}}
