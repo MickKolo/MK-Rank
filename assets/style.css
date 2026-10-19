@@ -226,20 +226,33 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .form input:focus,.form select:focus,.form textarea:focus{border-color:var(--navy)}
 .opt{font-weight:400;color:var(--muted)}
 .hp{position:absolute;left:-9999px}
-/* contact page: call card + next steps side by side, form as a full-width card below */
-.contact-top{align-items:stretch;padding-bottom:2rem}
-.form-grid input,.form-grid select{height:3rem}
-.form-section{padding-top:0}
+/* contact page: form first (wide), contact details sidebar (slim, sticky on desktop) */
+.page-head-compact{padding:1.75rem 0 2rem}
+.page-head-compact h1{max-width:none;margin-bottom:.5rem}
+.page-head-compact .lead{margin:0;max-width:none}
+@media (min-width:760px){.page-head-compact{padding:1.75rem 0 2rem}}
+.contact-layout{display:grid;gap:1.5rem;padding-top:1.5rem}
+@media (min-width:860px){.contact-layout{grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);align-items:start;gap:2rem}.contact-side{position:sticky;top:5.5rem}}
 #enquiry{scroll-margin-top:5.5rem}
-.form-card{padding:1.75rem}
-.form-card h2{margin-top:0}
-.form-grid{display:grid;grid-template-columns:1fr;column-gap:1.25rem;margin-top:1.25rem}
-.form-grid p{margin:0 0 1rem}
+.form-card{padding:1.5rem}
+.form-card h2{margin:0 0 .3rem;font-size:1.65rem}
+.form-intro{color:var(--muted);margin:0}
+.form-grid{display:grid;grid-template-columns:1fr;column-gap:1.25rem;margin-top:1rem}
+.form-grid p{margin:0 0 .75rem}
 .form-grid .full{grid-column:1/-1}
+.form-grid input,.form-grid select{height:2.9rem}
 .form-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.5rem}
 .form-foot p{margin:0}
+@media (min-width:600px){.form-foot{flex-wrap:nowrap}.form-foot .small{flex:1}}
 @media (min-width:600px){.form-grid{grid-template-columns:1fr 1fr}}
-@media (min-width:960px){.form-grid{grid-template-columns:repeat(3,1fr)}.form-card{padding:2rem 2.25rem}}
+@media (min-width:960px){.form-card{padding:1.6rem 2rem}}
+.contact-side h2{margin:0 0 .25rem}
+.contact-side .price{margin:.1rem 0 .75rem;font-size:1.6rem}
+.contact-side .cta-row{margin-bottom:.9rem}
+.contact-side p{margin-top:0}
+.side-h{font-size:1rem;margin:1.25rem 0 .5rem;padding-top:1rem;border-top:1px solid var(--line)}
+.steps-tight{margin:0 0 1rem;font-size:.95rem}.steps-tight li{margin-bottom:.35em}
+.side-areas{margin-bottom:0}
 .prose h2{font-size:1.3rem;margin-top:1.5em}
 
 /* ---------- footer ---------- */
