@@ -20,7 +20,6 @@ Each one sits inside an HTML comment, so visitors never see raw bracket text. Se
 | `[CALENDLY_URL]` | contact/index.html | Uncomment the "Book a call online" block. All "Contact options" buttons already lead to the contact page |
 | `[FORMSPREE_ID]` | contact/index.html | Replace the ID and uncomment the form |
 | `[LINKEDIN_URL]` | about/index.html | Uncomment the link and add `"sameAs"` to the Person schema |
-| `[PHOTO]` | about/index.html | Add a real photo (for example `assets/mick.jpg`) and uncomment the `<img>` |
 | `[TESTIMONIALS]` | index.html | Add real reviews only |
 | `[NUMBER]` | services/local-seo-setup/ | Number of pages included in the setup |
 | `[TURNAROUND]` | services/seo-fix-up/ | Fix-up turnaround. Update the FAQ answer in both the visible text and the FAQPage JSON-LD |
