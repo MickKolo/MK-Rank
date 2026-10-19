@@ -16,9 +16,7 @@ Each one sits inside an HTML comment, so visitors never see raw bracket text. Se
 
 | Placeholder | Where | What to do |
 |---|---|---|
-| `[EMAIL]` | Footer of every page, contact page | No email shown yet. Add the `mailto:` link from the comment, and add `"email"` to the ProfessionalService schema on the home page. Also mention email on the privacy page |
 | `[CALENDLY_URL]` | contact/index.html | Uncomment the "Book a call online" block. All "Contact options" buttons already lead to the contact page |
-| `[FORMSPREE_ID]` | contact/index.html | Replace the ID and uncomment the form |
 | `[LINKEDIN_URL]` | about/index.html | Uncomment the link and add `"sameAs"` to the Person schema |
 | `[TESTIMONIALS]` | index.html | Add real reviews only |
 | `[NUMBER]` | services/local-seo-setup/ | Number of pages included in the setup |
