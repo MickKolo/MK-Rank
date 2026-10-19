@@ -230,6 +230,7 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .contact-top{align-items:stretch;padding-bottom:2rem}
 .form-grid input,.form-grid select{height:3rem}
 .form-section{padding-top:0}
+#enquiry{scroll-margin-top:5.5rem}
 .form-card{padding:1.75rem}
 .form-card h2{margin-top:0}
 .form-grid{display:grid;grid-template-columns:1fr;column-gap:1.25rem;margin-top:1.25rem}
