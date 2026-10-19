@@ -226,6 +226,19 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .form input:focus,.form select:focus,.form textarea:focus{border-color:var(--navy)}
 .opt{font-weight:400;color:var(--muted)}
 .hp{position:absolute;left:-9999px}
+/* contact page: call card + next steps side by side, form as a full-width card below */
+.contact-top{align-items:stretch;padding-bottom:2rem}
+.form-grid input,.form-grid select{height:3rem}
+.form-section{padding-top:0}
+.form-card{padding:1.75rem}
+.form-card h2{margin-top:0}
+.form-grid{display:grid;grid-template-columns:1fr;column-gap:1.25rem;margin-top:1.25rem}
+.form-grid p{margin:0 0 1rem}
+.form-grid .full{grid-column:1/-1}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.75rem 1.5rem}
+.form-foot p{margin:0}
+@media (min-width:600px){.form-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:960px){.form-grid{grid-template-columns:repeat(3,1fr)}.form-card{padding:2rem 2.25rem}}
 .prose h2{font-size:1.3rem;margin-top:1.5em}
 
 /* ---------- footer ---------- */
