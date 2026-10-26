@@ -146,10 +146,10 @@ a.logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
 .hero-points li::before{content:"";flex:none;width:1em;height:1em;background:var(--accent);-webkit-mask:var(--i-check) center/contain no-repeat;mask:var(--i-check) center/contain no-repeat}
 @media (min-width:760px){.hero{padding:4.5rem 0 5rem}.page-head{padding:3.75rem 0 4rem}}
 
-/* homepage hero: lighter blue, soft white rings and a bright glow top-right */
-.hero{--ring:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='.09'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.03'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='83' fill='none' stroke='url(%23g)' stroke-width='32'/%3E%3Cg fill='none' stroke='%23fff'%3E%3Ccircle cx='100' cy='100' r='99' stroke-opacity='.1' vector-effect='non-scaling-stroke'/%3E%3Ccircle cx='100' cy='100' r='67' stroke-opacity='.06' vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");background:radial-gradient(900px 560px at 82% 5%,rgba(140,180,220,.38),transparent 70%),radial-gradient(600px 500px at 0% 70%,rgba(140,180,220,.1),transparent 70%),linear-gradient(160deg,#1e3d5c 0%,#2a4c6e 55%,#2f5476 100%)}
-.hero::after{background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px)}
-.hero+.section{background:#f4f7fb;box-shadow:0 0 0 100vmax #f4f7fb;clip-path:inset(0 -100vmax)}
+/* hero and page heads: lighter blue, soft white rings and a bright glow top-right */
+.hero,.page-head{--ring:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='.09'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.03'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='83' fill='none' stroke='url(%23g)' stroke-width='32'/%3E%3Cg fill='none' stroke='%23fff'%3E%3Ccircle cx='100' cy='100' r='99' stroke-opacity='.1' vector-effect='non-scaling-stroke'/%3E%3Ccircle cx='100' cy='100' r='67' stroke-opacity='.06' vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E");background:radial-gradient(900px 560px at 82% 5%,rgba(140,180,220,.38),transparent 70%),radial-gradient(600px 500px at 0% 70%,rgba(140,180,220,.1),transparent 70%),linear-gradient(160deg,#1e3d5c 0%,#2a4c6e 55%,#2f5476 100%)}
+.hero::after,.page-head::after{background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px)}
+.hero+.section,.page-head+.section:not(.alt){background:#f4f7fb;box-shadow:0 0 0 100vmax #f4f7fb;clip-path:inset(0 -100vmax)}
 
 /* price chips in location heroes */
 .price-chips{list-style:none;padding:0;margin:1.75rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
